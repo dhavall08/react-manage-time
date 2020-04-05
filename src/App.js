@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import TimeManage from './containers/TimeManage';
+import TimeManager from './containers/TimeManager';
+import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path="/" component={TimeManage} />
+      <Route path="/" component={TimeManager} />
     </BrowserRouter>
   );
 }
