@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import moment from 'moment';
-import { Button, Spin, DatePicker, Typography, Tooltip, Layout } from 'antd';
+import {Button, Spin, DatePicker, Typography, Tooltip, Layout} from 'antd';
 import {
   PlusSquareOutlined,
   LoadingOutlined,
@@ -18,11 +18,11 @@ import {
   notifyUser,
   showOverwriteConfirm,
 } from '../../utils/helper';
-import { HourInput, Adder, TimeTable, Wrapper } from './TimeManagerStyles';
-import { timeColumns } from '../../utils/constants';
+import {HourInput, Adder, TimeTable, Wrapper} from './TimeManagerStyles';
+import {timeColumns} from '../../utils/constants';
 
-const { Title, Text } = Typography;
-const { Content, Footer } = Layout;
+const {Title, Text} = Typography;
+const {Content, Footer} = Layout;
 
 const initIdealTime = {
   hours: 8,
@@ -90,7 +90,7 @@ function TimeManager() {
   const addData = () => {
     const currentData = getData();
     if (moment(time.date, 'DD-MM-YYYY').format('YYYY-MM') !== month) {
-      notifyUser('error', { message: 'Please select same month!' });
+      notifyUser('error', {message: 'Please select same month!'});
       return;
     }
     const newKey = getKey();
@@ -120,7 +120,7 @@ function TimeManager() {
   const storeData = (newData) => {
     localStorage.setItem(month, JSON.stringify(newData));
     getData();
-    notifyUser('success', { message: 'Data Updated!' });
+    notifyUser('success', {message: 'Data Updated!'});
     reviseDiffHours(newData);
   };
 
@@ -136,13 +136,13 @@ function TimeManager() {
 
   const saveTime = () => {
     localStorage.setItem('ideal', JSON.stringify(idealTime));
-    notifyUser('success', { message: 'Settings Updated!' });
+    notifyUser('success', {message: 'Settings Updated!'});
     reviseDiffHours(data);
   };
 
   const changeMonth = (value) => {
     setMonth(value);
-    notifyUser('success', { message: 'Month Changed!' });
+    notifyUser('success', {message: 'Month Changed!'});
     reviseDiffHours(getData(value));
   };
 
@@ -156,7 +156,7 @@ function TimeManager() {
         <Wrapper>
           <Spin
             spinning={loading}
-            indicator={<LoadingOutlined style={{ fontSize: 32 }} spin />}
+            indicator={<LoadingOutlined style={{fontSize: 32}} spin />}
           >
             <div className="head-title">
               <Title level={2}>Timely</Title>
@@ -270,7 +270,7 @@ function TimeManager() {
           </Spin>
         </Wrapper>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Created by Dhaval L.</Footer>
+      <Footer style={{textAlign: 'center'}}>Created by Dhaval L.</Footer>
     </Layout>
   );
 }

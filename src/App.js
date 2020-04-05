@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import TimeManager from './containers/TimeManager';
 import './App.css';
 

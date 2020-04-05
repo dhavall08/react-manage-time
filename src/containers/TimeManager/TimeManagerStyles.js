@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { InputNumber, Table } from 'antd';
+import {InputNumber, Table} from 'antd';
 
 export const Wrapper = styled.div`
   max-width: 600px;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { notification, Modal } from 'antd';
-import { ExclamationCircleOutlined } from '@ant-design/icons';
+import {notification, Modal} from 'antd';
+import {ExclamationCircleOutlined} from '@ant-design/icons';
 
 export const getKey = (currentData = []) => {
   const newKey = Date.now();
@@ -32,10 +32,10 @@ export const getDiffHours = (newData, idealTime) => {
   minutes = Math.abs(minutes);
   const hours = Math.floor(minutes / 60);
   minutes = minutes % 60;
-  return { hours, minutes, sign };
+  return {hours, minutes, sign};
 };
 
-export const notifyUser = (type, obj = { message: 'Success!' }) => {
+export const notifyUser = (type, obj = {message: 'Success!'}) => {
   notification[type]({
     ...obj,
     style: {
