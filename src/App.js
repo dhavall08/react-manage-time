@@ -1,15 +1,12 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import TimeManager from './containers/TimeManager';
 import './App.css';
+import usePageViews from './components/PageView';
 
 function App() {
   usePageViews();
-  return (
-    <BrowserRouter>
-      <Route path="/" component={TimeManager} />
-    </BrowserRouter>
-  );
+  return <Route path="/" component={TimeManager} />;
 }
 
 export default App;
