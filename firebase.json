@@ -7,5 +7,15 @@
       "**/.*",
       "**/node_modules/**"
     ]
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap.xml"
+    }
+  ]
 }

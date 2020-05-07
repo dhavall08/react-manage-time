@@ -4,6 +4,7 @@ import TimeManager from './containers/TimeManager';
 import './App.css';
 
 function App() {
+  usePageViews();
   return (
     <BrowserRouter>
       <Route path="/" component={TimeManager} />
